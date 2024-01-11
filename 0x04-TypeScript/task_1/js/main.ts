@@ -23,6 +23,19 @@ class TeacherClass implements Teacher {
   }
 }
 
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+
 const teacher3: Teacher = new TeacherClass('John', 'Doe', false, 'London', undefined, { contract: false });
 
+console.log(director1);
 console.log(teacher3);
