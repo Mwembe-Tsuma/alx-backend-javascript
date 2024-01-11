@@ -1,43 +1,28 @@
 // main.ts
 
-// Interface definition for Student
-interface Student {
+interface Teacher {
   firstName: string;
   lastName: string;
-  age: number;
-  location: string;
+  readonly fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  readonly location: string;
+  [key: string]: any;
 }
 
-// Create two students
-const student1: Student = {
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 20,
-  location: 'New York',
-};
+class TeacherClass implements Teacher {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public fullTimeEmployee: boolean,
+    public location: string,
+    public yearsOfExperience?: number,
+    additionalAttributes: Record<string, any> = {}
+  ) {
+    // Add additional attributes to the object
+    Object.assign(this, additionalAttributes);
+  }
+}
 
-const student2: Student = {
-  firstName: 'Jane',
-  lastName: 'Smith',
-  age: 22,
-  location: 'Los Angeles',
-};
+const teacher3: Teacher = new TeacherClass('John', 'Doe', false, 'London', undefined, { contract: false });
 
-// Create an array named studentsList containing the two variables
-const studentsList: Student[] = [student1, student2];
-
-// Render a table using Vanilla Javascript
-const table = document.createElement('table');
-
-// Append a new row for each element in the array
-studentsList.forEach((student) => {
-  const row = table.insertRow();
-  const cell1 = row.insertCell(0);
-  const cell2 = row.insertCell(1);
-
-  cell1.textContent = student.firstName;
-  cell2.textContent = student.location;
-});
-
-// Append the table to the body of the document
-document.body.appendChild(table);
+console.log(teacher3);
