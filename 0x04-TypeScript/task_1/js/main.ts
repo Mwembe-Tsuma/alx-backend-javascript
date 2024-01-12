@@ -52,3 +52,25 @@ const teacher3: Teacher = new TeacherClass('John', 'Doe', false, 'London', undef
 
 console.log(director1);
 console.log(teacher3);
+
+interface Student {
+  firstName: string;
+  lastName: string;
+}
+
+// Interface for the StudentClass class
+interface StudentClassInterface {
+  new (firstName: string, lastName: string): StudentClass;
+}
+
+class StudentClass implements Student {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
