@@ -35,6 +35,19 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 
+// Interface for the printTeacher function
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// Implementation of the printTeacher function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  const firstLetter = firstName.charAt(0).toUpperCase();
+  const fullName = `${firstLetter}. ${lastName}`;
+
+  return fullName;
+};
+
 const teacher3: Teacher = new TeacherClass('John', 'Doe', false, 'London', undefined, { contract: false });
 
 console.log(director1);
