@@ -1,5 +1,7 @@
-// File: 0-main.js
+// File: 0-console.js
 
-const displayMessage = require('./0-console');
+function displayMessage(message) {
+  console.log(message);
+}
 
-displayMessage("Hello NodeJS!");
+module.exports = displayMessage;
