@@ -38,7 +38,7 @@ describe('calculateNumber', () => {
       expect(calculateNumber('DIVIDE', 7.0, -2.0)).to.equal(-3.5);
       expect(calculateNumber('DIVIDE', 7.0, -2.0)).to.equal(-3.5);
       expect(calculateNumber('DIVIDE', -7.0, -2.0)).to.equal(3.5);
-      expect(calculateNumber('DIVIDE', 2.0, 2.0)).to.equal1);
+      expect(calculateNumber('DIVIDE', 2.0, 2.0)).to.equal(1);
       expect(calculateNumber('DIVIDE', -2.0, -2.0)).to.equal(1);
       expect(calculateNumber('DIVIDE', 2.6, 3.0)).to.equal(1);
       expect(calculateNumber('DIVIDE', 2.4, 2.0)).to.equal(1);
