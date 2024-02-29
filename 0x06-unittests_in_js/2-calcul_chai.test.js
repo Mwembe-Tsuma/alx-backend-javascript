@@ -1,9 +1,5 @@
-// File: 2-calcul_chai.test.js
-
-import chai from 'chai';
-import calculateNumber from './2-calcul_chai.js';
-
-const { expect } = chai;
+const { expect } = require('chai');
+const calculateNumber = require('./2-calcul_chai');
 
 
 describe('calculateNumber', () => {
