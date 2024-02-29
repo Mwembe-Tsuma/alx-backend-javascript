@@ -3,7 +3,7 @@ const calculateNumber = require('./2-calcul_chai');
 
 
 describe('calculateNumber', () => {
-  describe('SUM operation', () => {
+  describe('type == "SUM"', () => {
     it('should add rounded numbers', () => {
       expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
       expect(calculateNumber('SUM', 2.0, 2.0)).to.equal(4);
@@ -13,7 +13,7 @@ describe('calculateNumber', () => {
     });
   });
 
-  describe('SUBTRACT operation', () => {
+  describe('type == "SUBTRACT"', () => {
     it('should subtract rounded b from a', () => {
       expect(calculateNumber('SUBTRACT', 1.4, 4.5)).to.equal(-4);
       expect(calculateNumber('SUBTRACT', 2.0, 2.0)).to.equal(0);
@@ -24,7 +24,7 @@ describe('calculateNumber', () => {
     });
   });
 
-  describe('DIVIDE operation', () => {
+  describe('type == "DIVIDE"', () => {
     it('should divide rounded a by rounded b', () => {
       assert.strictEqual(calculateNumber('DIVIDE', 1.4, 4.5), 0.2);
     });
