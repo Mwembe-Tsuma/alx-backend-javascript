@@ -1,9 +1,8 @@
 // File: 2-calcul_chai.test.js
 
-const chai = require('chai');
+const { expect } = require('chai');
 const calculateNumber = require('./2-calcul_chai.js');
 
-const { expect } = chai;
 
 describe('calculateNumber', () => {
   describe('SUM operation', () => {
